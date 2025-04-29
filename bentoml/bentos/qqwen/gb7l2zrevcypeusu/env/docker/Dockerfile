@@ -59,7 +59,7 @@ RUN UV_PYTHON_INSTALL_DIR=/app/python/ uv venv --python 3.11 /app/.venv && \
 ENV VIRTUAL_ENV=/app/.venv
 ENV UV_COMPILE_BYTECODE=1
 RUN uv pip install torch==2.6.0 ; exit 0
-RUN uv pip install vllm==0.8.4 ; exit 0
+RUN uv pip install vllm==0.8.5 ; exit 0
 COPY --chown=bentoml:bentoml ./env/python ./env/python/
 # install python packages
 RUN uv --directory ./env/python/ pip install -r requirements.txt

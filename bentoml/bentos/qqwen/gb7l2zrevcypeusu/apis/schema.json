@@ -14,8 +14,8 @@
             "type": "string"
           },
           "max_tokens": {
-            "default": 2048,
-            "maximum": 2048,
+            "default": 1024,
+            "maximum": 1024,
             "minimum": 128,
             "title": "Max Tokens",
             "type": "integer"

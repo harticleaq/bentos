@@ -7,7 +7,7 @@ logger = logging.getLogger("bentoml.service")
 
 class BentoArgs(pydantic.BaseModel):
     openllm_model_id: str = "sarad777/xmodel777"
-    openllm_max_tokens: int = pydantic.Field(default_factory=lambda: int(os.environ.get("MAX_TOKENS", 2048)))
+    openllm_max_tokens: int = pydantic.Field(default_factory=lambda: int(os.environ.get("MAX_TOKENS", 1024)))
 
     disable_log_requests: bool = True
     max_log_len: int = 1000
@@ -96,9 +96,8 @@ class LLM:
         openai_api_app.include_router(router)
 
         engine = await self.exit_stack.enter_async_context(vllm_api_server.build_async_engine_client(args))
-        model_config = await engine.get_model_config()
-
-        await vllm_api_server.init_app_state(engine, model_config, openai_api_app.state, args)
+        vllm_config = await engine.get_vllm_config()
+        await vllm_api_server.init_app_state(engine, vllm_config, openai_api_app.state, args)
 
     @bentoml.on_shutdown
     async def teardown_engine(self):

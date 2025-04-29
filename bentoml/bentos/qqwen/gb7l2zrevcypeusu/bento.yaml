@@ -1,8 +1,8 @@
 service: service:LLM
 name: qqwen
-version: 2lrwelbeswawwusu
+version: gb7l2zrevcypeusu
 bentoml_version: 1.4.8
-creation_time: '2025-04-29T01:04:04.150085+00:00'
+creation_time: '2025-04-29T03:15:25.842568+00:00'
 labels:
   aliases: 0.5b
   generator: openllm
@@ -15,7 +15,7 @@ services:
   models:
   - tag: sarad777--xmodel777:3aced482919079fb796dd31394743f6a
     module: null
-    creation_time: '2025-04-29T01:03:56.178849+00:00'
+    creation_time: '2025-04-29T03:15:24.475120+00:00'
     registry: huggingface
     metadata:
       model_id: sarad777/xmodel777
@@ -65,8 +65,8 @@ schema:
           title: Prompt
           type: string
         max_tokens:
-          default: 2048
-          maximum: 2048
+          default: 1024
+          maximum: 1024
           minimum: 128
           title: Max Tokens
           type: integer
@@ -150,7 +150,7 @@ image:
 
     email-validator==2.2.0
 
-    fastapi==0.115.4
+    fastapi==0.115.12
 
     fastapi-cli==0.0.7
 
@@ -262,7 +262,7 @@ image:
 
     nvidia-nvtx-cu12==12.4.127
 
-    openai==1.69.0
+    openai==1.73.0
 
     opencv-python-headless==4.11.0.86
 
@@ -322,9 +322,9 @@ image:
 
     pycountry==24.6.1
 
-    pydantic==2.11.1
+    pydantic==2.11.3
 
-    pydantic-core==2.33.0
+    pydantic-core==2.33.1
 
     pygments==2.19.1
 
@@ -376,7 +376,7 @@ image:
 
     sniffio==1.3.1
 
-    starlette==0.41.3
+    starlette==0.46.2
 
     sympy==1.13.1
 
@@ -412,7 +412,7 @@ image:
 
     uvloop==0.21.0
 
-    vllm==0.8.4
+    vllm==0.8.5
 
     watchfiles==1.0.5
 

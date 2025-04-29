@@ -1,0 +1,5 @@
+bentoml==1.4.8
+vllm==0.8.5
+fastapi==0.115.12
+pydantic==2.11.3
+openai==1.73.0
